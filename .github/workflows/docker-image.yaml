@@ -31,8 +31,8 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ghcr.io/sataniceypz/sataniceypz/izumi-render:latest  # Replace with your image name
+          tags: ghcr.io/Akshay-Eypz/Akshay-Eypz/izumi-render:latest  # Replace with your image name
 
       # Step 5: Verify image (optional)
       - name: Verify image
-        run: docker pull ghcr.io/sataniceypz/sataniceypz/izumi-render:latest
+        run: docker pull ghcr.io/Akshay-Eypz/Akshay-Eypz/izumi-render:latest
