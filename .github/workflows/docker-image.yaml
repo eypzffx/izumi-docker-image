@@ -4,13 +4,10 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 permissions:
   contents: read
-  packages: write  # ✅ This allows pushing to GHCR
+  packages: write  # ✅ Allow access to GHCR
 
 jobs:
   build:
@@ -28,7 +25,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}  # ✅ No need for a PAT
+          password: ${{ secrets.GITHUB_TOKEN }}  # ✅ No need for a manual PAT
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
