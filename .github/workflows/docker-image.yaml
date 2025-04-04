@@ -33,4 +33,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/eypzffx/izumi:latest
-
